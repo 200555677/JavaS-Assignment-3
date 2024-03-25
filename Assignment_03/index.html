@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Order Pizza Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form id="formPizza">
+            <h2>Pizza Order Form</h2>
+            <input id="inptFname" name="fname" type="text" placeholder="First Name" aria-label="First Name" required />
+            <input id="inptLname" name="lname" type="text" placeholder="Last Name" aria-label="Last Name" required />
+
+            <fieldset id="crustType">
+                <legend>
+                    Crust
+                </legend>
+                <div>
+                    <label for="rdoThin"><input id="rdoThin" name="crust" type="radio" value="thin" />Thin [5.00$]</label>
+                    <label for="rdoClassic">    <input id="rdoClassic" name="crust" type="radio" value="classic" />Classic [6.00$]</label>
+                    <label for="rdoDeep">
+                        <input id="rdoDeep" name="crust" type="radio" value="deep" />Deep Dish [8.00$]</label>
+                </div>
+            </fieldset>
+
+            <fieldset id="toppings">
+                <legend>
+                    Toppings [Each Topping = 0.99]
+                </legend>
+                <div>
+                    <label for="checkSausage"><input name="toppings" type="checkbox" value="sausage"
+                            id="checkSausage" />Sausage</label>
+                    <label for="checkPepperoni"><input name="toppings" type="checkbox" value="pepperoni"
+                            id="checkPepperoni" />Pepperoni</label>
+                    <label for="checkMushrooms"><input name="toppings" type="checkbox" value="mushrooms"
+                            id="checkMushrooms" />Mushrooms</label>
+                    <label for="checkOnions"><input name="toppings" type="checkbox" value="onions"
+                            id="checkOnions" />Onions</label>
+                    <label for="checkPeppers"><input name="toppings" type="checkbox" value="peppers"
+                            id="checkPeppers" />Green Peppers</label>
+                    <label for="checkOlives"><input name="toppings" type="checkbox" value="olives"
+                            id="checkOlives" />Black Olives</label>
+                    <label for="checkCheese"><input name="toppings" type="checkbox" value="extraCheese"
+                            id="checkCheese" />Extra Cheese</label>
+                </div>
+            </fieldset>
+
+            <div class="size-wrap">
+                <label for="selSize">Size:</label>
+                <select id="selSize" name="size" required>
+                    <option disabled selected value=""> ---Choose a Size---</option>
+                    <option value="XL">XL [12.00$]</option>
+                    <option value="large">Large [7.00$]</option>
+                    <option value="medium">Medium [5.00$]</option>
+                    <option value="small">Small [3.00$]</option>
+                </select>
+            </div>
+            <button type="submit">Order</button>
+            <div class="hide">
+                <span>Total Cost:</span>
+                <span id="price"></span>
+              </div>
+        </form>
+        <!-- display none -->
+        <p id="orderResult" class="otherInfo"></p>
+
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
